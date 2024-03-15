@@ -1,0 +1,41 @@
+{
+    "env": {
+      "browser": true,
+      "es2021": true,
+      "node": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 12,
+      "sourceType": "module"
+    },
+
+    //R: stand for Rule
+    "rules": {
+      "eqeqeq": "error", //R1. cant use == must use three eq ===
+      "quotes": ["error", "single"], //R2. must be use single quotes
+      "semi": ["error", "never"], //R3. don't need to use ; in the end of line code
+      "no-lonely-if": "error", //R4. if you use if in else condition is false -> must else if
+      "no-dupe-else-if": "error", //R5. don't allow to use duplicate condition in else if
+      "no-unused-vars": "error", //R6: declare but not use
+      "no-use-before-define": "error", //R7: must be define before use it
+      "no-duplicate-imports": "error", //R8: don't allow to import duplicate
+      "no-constant-condition": "error", //R9: don't allow to use constant in condition (true, false, 1===1)
+      "no-sparse-arrays": "error", //R10: don't allow ',' before element in arr
+      "no-undef": "error", //R11: don't allow undef value
+      "no-var": "error",//R12: don't allow to use var declare value
+      "no-warning-comments": ["error", { "terms": ["todo", "fixme", "ngu"], "location": "anywhere" }],
+       //R13: don't allow comment all those words in terms
+      "no-useless-return": "error", //R14: don't allow to unless return
+      "dot-notation": "error",//R15: don't allow to get attribute of object with ["attribute"]
+      "curly": "error",//R16: don't allow to curly the condition
+      "camelcase": "error", //R17: must naming with camel case or another like that
+      "id-length": ["error", {"min": 2}], //R18: must naming for value length > min 
+      "max-params": ["error", 3], //R19: not allow dot use so much params in function (max: 3)
+      "no-empty-function": "error" //R20: not allow declare function empty
+    }
+  }
+  
